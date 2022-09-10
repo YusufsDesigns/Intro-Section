@@ -634,8 +634,8 @@ video {
   width: 100%;
 }
 
-.w-1\/2{
-  width: 50%;
+.w-3\/4{
+  width: 75%;
 }
 
 .w-14{
@@ -644,10 +644,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-3\/4{
-  width: 75%;
 }
 
 .max-w-screen-2xl{
@@ -852,11 +848,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-blue-500{
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .text-blue-700{

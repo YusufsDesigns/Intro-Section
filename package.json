@@ -4,8 +4,8 @@
   "description": "![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/style.css",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/css/style.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/css/style.css --watch"
   },
   "keywords": [],
   "author": "",
