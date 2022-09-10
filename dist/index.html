@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body class="font-intro bg-almostWhite">
+  <!-- Navbar -->
+  <nav class="relative py-6" id="nav">
+    <div class="max-w-screen-2xl mx-auto flex justify-between items-center px-8">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="/images/logo.svg" alt="">
+      </div>
+      <!-- List Items -->
+      <ul class="hidden md:flex md:flex-row md:space-x-10 md:ml-12 md:flex-1">
+        <!-- List Item 1 -->
+        <li class="flex space-x-1 items-center text-mediumGray relative cursor-pointer" data-target="#features">
+          Features
+          <img src="/images/icon-arrow-down.svg" alt="" class="ml-1 arrow-down">
+          <img src="/images/icon-arrow-up.svg" alt="" class="hidden arrow-up">
+          <!-- Inner List Items -->
+          <ul id="features" class="absolute hidden flex-col items-start px-8  py-4 space-y-4 bg-white shadow-2xl shadow-mediumGray top-8 right-0 rounded-md">
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-todo.svg" alt="">
+              <span>Todo List</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-calendar.svg" alt="">
+              <span>Calender</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-reminders.svg" alt="">
+              <span>Remainder</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-planning.svg" alt="">
+              <span>Planning</span>
+            </li>
+          </ul>
+        </li>
+        <!-- List Item 2 -->
+        <li class="flex space-x-1 items-center text-mediumGray relative cursor-pointer" data-target="#company">Company
+          <img src="/images/icon-arrow-down.svg" alt="" class="ml-1 arrow-down">
+          <img src="/images/icon-arrow-up.svg" alt="" class="hidden arrow-up">
+          <!-- Inner List Items -->
+          <ul id="company" class="absolute w-32 px-6 hidden flex-col py-4 space-y-4 bg-white shadow-2xl shadow-mediumGray top-8 left-0 rounded-md">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <!-- List Item 3 -->
+        <li>
+          <a href="#"  class="text-mediumGray">Careers</a>
+        </li>
+        <!-- List Item 4 -->
+        <li>
+          <a href="#"  class="text-mediumGray">About</a>
+        </li>
+
+      </ul>
+      <!-- Login & Register button -->
+      <div class="hidden md:flex md:space-x-8 md:items-center">
+        <a href="#" class="text-mediumGray">Login</a>
+        <a href="#" class="inline-block rounded-xl border-2 border-mediumGray py-2 px-6 text-mediumGray hover:border-almostBlack">Register</a>
+      </div>
+      <!-- Hamburger -->
+      <div id="hamburger" class="md:hidden cursor-pointer">
+        <img src="/images/icon-menu.svg" alt="">
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu Body -->
+  <div id="menu-body" class="menu w-full h-full absolute z-10 top-0 left-0 hidden transition duration-1000">
+    <!-- Mobile Menu -->
+    <div id="menu" class="py-8 px-6 absolute top-0 right-0 bg-white h-full w-3/4">
+      <!-- Close Button -->
+      <div id="close-btn" class="absolute top-5 right-5 cursor-pointer">
+        <img src="/images/icon-close-menu.svg" alt="">
+      </div>
+      <!-- Mobile List Items -->
+      <ul class="py-12">
+        <!-- Mobile List Item 1 -->
+        <li>
+          <div class="flex items-center space-x-2 pb-2.5 text-mediumGray cursor-pointer hover:text-black toggle">Features
+            <img src="/images/icon-arrow-down.svg" alt="" class="ml-1 arrow-down">
+          <img src="/images/icon-arrow-up.svg" alt="" class="hidden arrow-up">
+          </div>
+          <ul class="flex flex-col items-start px-8 space-y-4 h-0 overflow-hidden transition-all">
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-todo.svg" alt="">
+              <span>Todo List</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-calendar.svg" alt="">
+              <span>Calender</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-reminders.svg" alt="">
+              <span>Remainder</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <img src="/images/icon-planning.svg" alt="">
+              <span>Planning</span>
+            </li>
+          </ul>
+        </li>
+        <!-- Mobile List Item 2 -->
+        <li class="">
+          <div class="flex items-center space-x-2 py-2.5 text-mediumGray cursor-pointer hover:text-black toggle">Company
+            <img src="/images/icon-arrow-down.svg" alt="" class="ml-1 arrow-down">
+            <img src="/images/icon-arrow-up.svg" alt="" class="hidden arrow-up">
+          </div>
+          <ul class="px-6 flex flex-col space-y-4 relative h-0 overflow-hidden transition-all">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <!-- Mobile List Item 3 -->
+        <li class="py-2">
+          <a href="#"  class="text-mediumGray">Careers</a>
+        </li>
+        <!-- Mobile List Item 4 -->
+        <li class="py-2">
+          <a href="#"  class="text-mediumGray">About</a>
+        </li>
+      </ul>
+      <!-- Login & Register Button-->
+      <div class="flex flex-col text-center">
+        <a href="#" class="text-mediumGray mb-2">Login</a>
+        <a href="#" class="inline-block rounded-xl border-2 border-mediumGray py-2 px-6 text-mediumGray hover:border-almostBlack">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Showcase -->
+  <div class="py-8">
+    <div class="flex flex-col-reverse items-center md:items-end max-w-screen-xl mx-auto md:flex-row md:px-8 gap-8">
+      <div class="flex flex-col items-center w-full text-center px-4 md:text-left md:w-1/2 md:items-start space-y-10 md:px-10 mt-10">
+        <h1 class="text-5xl md:text-7xl font-bold">Make <br class="hidden md:block"> Remote Work</h1>
+        <p class="text-mediumGray max-w-md">Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
+        <button href="#" class="rounded-xl bg-almostBlack text-white py-3 px-6">Learn more</button>
+        <div class="flex justify-between md:pt-36 space-x-5">
+          <img src="/images/client-audiophile.svg" alt="" class="w-14 md:w-20 object-contain">
+          <img src="/images/client-databiz.svg" alt="" class="w-14 md:w-20 object-contain">
+          <img src="/images/client-maker.svg" alt="" class="w-14 md:w-20 object-contain">
+          <img src="/images/client-meet.svg" alt="" class="w-14 md:w-20 object-contain">
+        </div>
+      </div>
+      <div class="w-screen md:w-1/2">
+        <img src="/images/image-hero-desktop.png" alt="" class="hidden md:block">
+        <img src="/images/image-hero-mobile.png" alt="" class="md:hidden w-full">
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution text-center pt-8 pb-4">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-700">Frontend Mentor</a>. 
+    Coded by <a href="https://yusuflawal.netlify.app/" class="text-blue-700">Yusuf Lawal</a>.
+  </div>
+
+  
+  <script src="/dist/main.js"></script>
+</body>
+</html>
